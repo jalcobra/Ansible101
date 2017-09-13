@@ -1,2 +1,19 @@
 ---
-# tasks file for sqlserver
+tasks:
+- name: add repositories
+apt_repository: repo={{item}} state=present update_cache=yes
+ with_items:
+    - ppa:MySQL/stable
+    
+    
+- name: instalación de MySQL
+  apt:
+    name:MySQL-python
+    state: present
+    
+- name: start MySQL
+  service:
+    name: MySQL-python
+    state: started
+    enabled: yes
+    
