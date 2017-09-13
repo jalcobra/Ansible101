@@ -3,7 +3,7 @@ tasks:
 - name: add repositories
 apt_repository: repo={{item}} state=present update_cache=yes
  with_items:
-    - ppa:MySQL/stable
+    - ppa:MySQL-python/stable
     
     
 - name: instalación de MySQL
