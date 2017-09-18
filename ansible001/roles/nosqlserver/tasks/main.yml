@@ -1,4 +1,4 @@
-
+---
 - name: Instalar Redis
   apt: pkg=redis-server state=latest
   sudo: true
