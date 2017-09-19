@@ -1,0 +1,8 @@
+---
+- name: Instalación y configuración de un stack para una base de datos sql
+ hosts: sql
+  become: yes
+  remote_user: root
+  become_user: root
+  roles:
+   - sqlserver
